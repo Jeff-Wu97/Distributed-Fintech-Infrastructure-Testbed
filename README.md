@@ -1,4 +1,4 @@
-# Demo: Distributed-Fintech-Infrastructure-Testbed
+# Distributed-Fintech-Infrastructure-Testbed
 
 Thanks for your visit!
 
