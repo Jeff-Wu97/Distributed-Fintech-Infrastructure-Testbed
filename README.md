@@ -1,5 +1,8 @@
 # Distributed-Fintech-Infrastructure-Testbed
+## Update: ECSchnorr Signature
+The Schnorr.java contains a demo for ECSchnorr signature. It creates EC keypairs, generates Schnorr signature, and verify the message with signature. The encrypted string in the demo is "HelloZhe" (row 273, main). You can modify it as you like. 
 
+## Mobile PBFT 
 Thanks for your visit!
 
 With the advancement of Internet financial technology, the transaction security is drawing more public attention. The consensus algorithms is applied in distributed financial systems to ensure transaction consistency. This ongoing project aims to explore implementation consensus algorithms based on mobile.
