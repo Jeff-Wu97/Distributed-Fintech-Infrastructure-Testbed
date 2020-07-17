@@ -1,6 +1,6 @@
 # Distributed-Fintech-Infrastructure-Testbed
 ## Update: ECSchnorr Signature
-The *Schnorr.java* contains a demo for ECSchnorr signature. It creates EC keypairs, generates Schnorr signature, and verify the message with signature. The encrypted string in the demo is "HelloZhe" (row 273, main). You can modify it as you like. 
+The *Schnorr.java* contains a demo for ECSchnorr signature. It creates EC keypairs, generates Schnorr signature, and verify the message with signature. The encrypted string in the demo is "HelloZhe" (defined at row 273, main).  
 
 ## Mobile PBFT 
 Thanks for your visit!
