@@ -1,9 +1,9 @@
 # Distributed-Fintech-Infrastructure-Testbed
 ## Update: View-Change Protocol
-The View-Change protocol has been implemented in the dir *PBFT_v2*, which is a demo on Android emulators as well. 
+The View-Change protocol has been implemented in the dir *PBFT_v2*, which is an Andriod demo. 
 
 
-To interconnecting emulator instances, a script code *tel_redir.py* has been upload to redirect ports, so that you needn't start telnet session manually anymore.   
+To interconnecting emulator instances, a script code *tel_redir.py* has been uploaded to redirect ports, so that you needn't start telnet session manually anymore.
 
 
 Thank you!
