@@ -1,4 +1,13 @@
 # Distributed-Fintech-Infrastructure-Testbed
+## Update: View-Change Protocol
+The View-Change protocol has been implemented in the dir *PBFT_v2*, which is a demo on Android emulators as well. 
+
+To redir ports for emulators connection, a script code *tel_redir.py* has been upload so that you needn't start telnet session manually. 
+
+Besides, the *CommDemoMainNode* is a redundent dir. Please do not care about that.  
+
+Thank you!
+
 ## Update: ECSchnorr Signature
 The *Schnorr.java* contains a demo for ECSchnorr signature. It creates EC keypairs, generates Schnorr signature, and verify the message with signature. The encrypted string in the demo is "HelloZhe" (defined at row 273, main).  
 
