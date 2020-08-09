@@ -1,7 +1,10 @@
 # Distributed-Fintech-Infrastructure-Testbed
-##Update: Layout Optimization
-The new layout in *PBFT_v3* is friendly to operate. It could be run as a good demo of a transaction. Do not forget the run the *tel_redir.py* first! 
+
+## Update: Layout Optimization
+The new layout in *PBFT_v3* is friendly to operate. It could be run as a good demo of a transaction on 4-nodes mobile network. Do not forget the run the *tel_redir.py* first! 
+
 If you would like to catch main codes, please visit this page https://github.com/Jeff-Wu97/Distributed-Fintech-Infrastructure-Testbed/tree/master/PBFT_v3/app/src/main/java/com/example/commdemo.
+
 
 Thanks.
 
