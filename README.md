@@ -3,13 +3,13 @@
 ## Update: Layout Optimization
 The new layout in *PBFT_v3* is friendly for user operation. It could be run as a good Android Studio demo of a transaction on 4-nodes mobile network. Do not forget to run the *tel_redir.py* first! 
 
-If you would like to catch main codes, please visit this page https://github.com/Jeff-Wu97/Distributed-Fintech-Infrastructure-Testbed/tree/master/PBFT_v3/app/src/main/java/com/example/commdemo.
+If you would like to catch main codes, which has been modified easy to go through, please visit this page https://github.com/Jeff-Wu97/Distributed-Fintech-Infrastructure-Testbed/tree/master/PBFT_v3/app/src/main/java/com/example/commdemo.
 
 
 Thanks.
 
 ## Update: View-Change Protocol
-The View-Change protocol has been implemented in the dir *PBFT_v2*, which is an Andriod demo. 
+The View-Change protocol has been implemented in the dir *PBFT_v2*, which is an Andriod demo. This demo is integrated with the Schnorr signature and verification mechanism. 
 
 
 To interconnecting emulator instances, a script code *tel_redir.py* has been uploaded to redirect ports, so that you needn't start telnet session manually anymore.
@@ -18,7 +18,7 @@ To interconnecting emulator instances, a script code *tel_redir.py* has been upl
 Thank you!
 
 ## Update: ECSchnorr Signature
-The *Schnorr.java* contains a demo for ECSchnorr signature. It creates EC keypairs, generates Schnorr signature, and verify the message with signature. The encrypted string in the demo is "HelloZhe" (defined at row 273, main).  
+The *Schnorr.java* contains a demo for ECSchnorr signature. It creates EC keypairs, generates Schnorr signature, and verify the message with signature. The encrypted string in the demo is "HelloZhe" (defined at row 273, main). Welcome to run the demo on your Eclipse!
 
 ## Mobile PBFT 
 Thanks for your visit!
