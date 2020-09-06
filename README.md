@@ -23,7 +23,7 @@ To interconnecting emulator instances, a script code *tel_redir.py* has been upl
 Thank you!
 
 ## Update: ECSchnorr Signature
-The *Schnorr.java* contains a demo for ECSchnorr signature. It creates EC keypairs, generates Schnorr signature, and verify the message with signature. The encrypted string in the demo is "HelloZhe" (defined at row 273, main). Welcome to run the demo on your Eclipse!
+The *Schnorr.java* contains a demo for ECSchnorr signature. It creates EC keypairs, generates Schnorr signature, and verify the message with signature. The encrypted string is "HelloWorld" (defined at row 273, main). Welcome to run the demo on your Eclipse!
 
 ## Mobile PBFT 
 Thanks for your visit!
