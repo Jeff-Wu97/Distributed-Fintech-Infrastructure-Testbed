@@ -1,7 +1,7 @@
 # Distributed-Fintech-Infrastructure-Testbed
 
 ## Final Update: Dissertation Submitted
-This is the last update for mobile fintech infrastructure app. The *Zyzzyva* is uploaded to test the transaction based on Zyzzyva. The *TestPBFT* and *TestZyzzyva* are two project files for performance measurement for batch trsaction with PBFT and Zyzzyva. Please install the Android Studio before running these files.
+This is the last update for mobile fintech infrastructure app. The dictionary *Zyzzyva* is uploaded to test the transaction based on Zyzzyva. The dictionary *TestPBFT* and *TestZyzzyva* are two project files for performance measurement for batch trsaction with PBFT and Zyzzyva. Please install the Android Studio before running these files.
 
 Thank You!
 
