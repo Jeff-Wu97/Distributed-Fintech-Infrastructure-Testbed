@@ -226,7 +226,7 @@ public class Schnorr {
 	}
 	
 	public static void keyGen() throws Exception  {
-		System.out.println("ÏµÍ³ÕıÔÚ³õÊ¼»¯¡­¡­");
+		System.out.println("ç³»ç»Ÿæ­£åœ¨åˆå§‹åŒ–â€¦â€¦");
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("EC");
         ECGenParameterSpec ecGenParameterSpec = new ECGenParameterSpec("secp256k1");
         keyPairGenerator.initialize(ecGenParameterSpec);
@@ -234,14 +234,14 @@ public class Schnorr {
         ECPublicKey ecPublicKey = (ECPublicKey)keyPair.getPublic();
         ECPrivateKey ecPrivateKey = (ECPrivateKey)keyPair.getPrivate();
         
-        //»ñÈ¡Ë½Ô¿D
+        //è·å–ç§é’¥D
         BigInteger D = ecPrivateKey.getS();
         String D_16=D.toString(16);
         ecPara.put("privateKey", D_16);
-        //µÃµ½¹«Ô¿µÄºá×İ×ø±ê
+        //å¾—åˆ°å…¬é’¥çš„æ¨ªçºµåæ ‡
         BigInteger publicKeyX= ecPublicKey.getW().getAffineX();
         BigInteger publicKeyY= ecPublicKey.getW().getAffineY();
-        //¹«Ô¿Ñ¹Ëõ·½·¨£ºÈôyÊÇÆæÊı£¬ÔòÑ¹Ëõ¹«Ô¿Îª03+x£»ÈôyÊÇÅ¼Êı£¬ÔòÑ¹Ëõ¹«Ô¿Îª02+x
+        //å…¬é’¥å‹ç¼©æ–¹æ³•ï¼šè‹¥yæ˜¯å¥‡æ•°ï¼Œåˆ™å‹ç¼©å…¬é’¥ä¸º03+xï¼›è‹¥yæ˜¯å¶æ•°ï¼Œåˆ™å‹ç¼©å…¬é’¥ä¸º02+x
         String pubkey="";
         String str_pubkeyY_bi=publicKeyY.toString(2);
         String str_pubkeyX=publicKeyX.toString(16);
@@ -258,20 +258,20 @@ public class Schnorr {
 		boolean all_passed=true;
 		Scanner scanner=null;
 		///////////////////////////////////////////////////////////////////////////////////
-		//²úÉú¹«Ë½ÃÜÔ¿
+		//äº§ç”Ÿå…¬ç§å¯†é’¥
 		try {
-			System.out.println("ÕıÔÚÉú³ÉÃÜÔ¿");
+			System.out.println("æ­£åœ¨ç”Ÿæˆå¯†é’¥");
 			keyGen();
-			System.out.println("ÒÑÉú³ÉË½Ô¿£º"+ecPara.get("privateKey"));
-			System.out.println("ÒÑÉú³É¹«Ô¿£º"+ecPara.get("publicKey"));
+			System.out.println("å·²ç”Ÿæˆç§é’¥ï¼š"+ecPara.get("privateKey"));
+			System.out.println("å·²ç”Ÿæˆå…¬é’¥ï¼š"+ecPara.get("publicKey"));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		////////////////////////////////////////////////////////////////////////////////////
-		//Ğ´ÈëÊı¾İ
-		String data="HelloZhe";
-		System.out.println("Ç©ÃûµÄÏûÏ¢£º"+data+" £¬¶¨ÒåÔÚµÚ273ĞĞ");
+		//å†™å…¥æ•°æ®
+		String data="HelloWorld";
+		System.out.println("ç­¾åçš„æ¶ˆæ¯ï¼š"+data+" ï¼Œå®šä¹‰åœ¨ç¬¬273è¡Œ");
 		byte[] msg;
 		MessageDigest md5;
 		try {
@@ -279,24 +279,24 @@ public class Schnorr {
 			md5.update(data.getBytes());
 			msg = md5.digest();
 			////////////////////////////////////////////////////////////////////////////////////
-			//²úÉúÊı×ÖÇ©Ãû
-			System.out.println("ÕıÔÚÉú³ÉÇ©Ãû");
+			//äº§ç”Ÿæ•°å­—ç­¾å
+			System.out.println("æ­£åœ¨ç”Ÿæˆç­¾å");
 			BigInteger privateKey= new BigInteger(ecPara.get("privateKey"),16);
 			String sig=bytesToHex(schnorr_sign(msg, privateKey));
-			System.out.println("ÒÑÉú³ÉÇ©Ãû£º"+sig);
+			System.out.println("å·²ç”Ÿæˆç­¾åï¼š"+sig);
 			///////////////////////////////////////////////////////////////////////////////////
-			//ÑéÖ¤Êı×ÖÇ©Ãû
-			System.out.println("ÕıÔÚÑéÖ¤Ç©Ãû");
+			//éªŒè¯æ•°å­—ç­¾å
+			System.out.println("æ­£åœ¨éªŒè¯ç­¾å");
 			byte[] pubkey=hexStringToByteArray(ecPara.get("publicKey"));
 			try {
 				boolean result_actual = schnorr_verify(msg, pubkey, hexStringToByteArray(sig));
 				if (result_actual) {
-					System.out.println("Ç©ÃûÑéÖ¤Í¨¹ı");
+					System.out.println("ç­¾åéªŒè¯é€šè¿‡");
 				}else {
-					System.out.println("ÑéÖ¤Ê§°Ü£¬Çë¸üĞÂÃÜÔ¿");
+					System.out.println("éªŒè¯å¤±è´¥ï¼Œè¯·æ›´æ–°å¯†é’¥");
 				}
 			}catch(Exception e){
-				System.out.println("Ç©Ãû´íÎó£¬ÑéÖ¤Ê§°Ü");
+				System.out.println("ç­¾åé”™è¯¯ï¼ŒéªŒè¯å¤±è´¥");
 			}
 			
 		} catch (NoSuchAlgorithmException e) {
